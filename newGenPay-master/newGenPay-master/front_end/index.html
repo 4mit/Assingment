@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Front_end</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="main">
+  <div class="left">
+     <h3 align="center"> Click Tabs to Navigate through</h3>
+        <nav class="tabs">
+            <a href="#" class="tab" tab_vlaue="0">PHP</a>
+            <a href="#" class="tab" tab_vlaue="1">JAVASCRIPT</a>
+            <a href="#" class="tab" tab_vlaue="2">ANGULAR JS </a>
+            <a href="#" class="tab" tab_vlaue="3">REACT JS</a>
+        </nav>
+        <nav>
+          <h2 align="center">Change Font Size</h2>
+          <input type="range" onchange="changeFont()" id="slider" max="100" min="10">
+
+        </nav>
+    </div>
+  
+  <div class="r">
+     
+      <div id="printArea"></div>
+      <br>
+      <hr>
+      
+     <div id="buttonArea">
+        <h3> List Items</h3>
+        <button type="button" onclick="addItem()">Add New Item </button>
+         <div id="item_btn">
+            <ol id="item_list"></ol>
+         </div>
+     </div>
+  </div>
+</div>
+  
+    <script  src="js/index.js"></script>
+
+</body>
+</html>

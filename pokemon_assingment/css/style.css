@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');/*font-family: 'Titillium Web', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC');/*digits*/
+.allweek{height:400px;overflow:auto;outline:2px solid black;}
+body{
+	background-image:url('https://www.pixelstalk.net/wp-content/uploads/2016/06/Pokemon-Charizard-HD-Backgrounds.jpg');
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center;
+	font-family: 'Titillium Web', sans-serif;
+	color:white;
+}
+.title{font-family: 'Aldrich', sans-serif;}
+.digit{font-family: 'Spectral SC', serif;font-size:18px;}
+.material{
+	padding:10px;
+	background-color:rgba(32, 34, 35, 0.94);
+	-webkit-box-shadow: 0 8px 8px rgba(0,0,0,0.12), 0 5px 10px rgba(18, 18, 19, 0.88);
+	        box-shadow: 0 8px 8px rgba(0,0,0,0.12), 0 5px 10px rgba(18, 18, 19, 0.88)}
+.m10{padding:10px !important;}
+
+.list-group-item{
+	background-color:transparent;
+	font-size:19px;
+	 border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+.list-group-item:hover{0
+	background-color:black;-webkit-transition:0.8s ease-in-out;transition:0.8s ease-in-out;
+}
+.badge{
+	background-color:#f90606;
+}
+.totalpoks{background-color:#0c0c0c;padding:10px}
+.list-title{background-color:#3f0af5;padding:10px;}
+.font19{font-size:19px;}
+.well{background-color:transparent;}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pokemon_assingment</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <h2 class="text-center title "><strong>Pokemon App</strong></h2>
+<div class="col-xs-12" ng-app="myapp" ng-controller="ctrl">
+	<div class="col-xs-12 col-sm-6 m10">
+		<div class="material">
+			<h3 class="text-center title animated infinite flipInX">Top 3 Weekness</h3>
+				<ol>
+					<li class="font19" ng-repeat="wk in weeknessArray"><b>{{wk}}</b></li>
+				</ol>
+				<h5 class="title totalpoks">Number of Pokemon Having All Weekness is <span class="badge animated infinite pulse">{{havingAllWeekness}}</span></h5>
+		</div>
+		<div class="material">
+			<h3 class="text-center">Evolution Print</h3>
+				<div class="well totalpoks" ng-repeat ="evl in evolution">
+					<p>
+						<span>{{evl.first.name}}</span>
+						<span>({{evl.first.height}},</span>
+						<span>{{evl.first.weight}},</span>
+						<span>{{evl.first.spawn_time}})</span> -->
+						<span>{{evl.second.name}}</span>
+						<span>({{evl.second.height}},</span>
+						<span>{{evl.second.weight}},</span>
+						<span>{{evl.second.spawn_time}})</span> -->
+						<span>{{evl.third.name}}</span>
+						<span>({{evl.third.height}},</span>
+						<span>{{evl.third.weight}},</span>
+						<span>{{evl.third.spawn_time}})</span>	
+					</p>
+				</div>
+		</div>
+	</div>
+	
+	
+	<div class="col-xs-12 col-sm-6 m10">
+		<div class="material">
+			<h3 class="text-center title">Top 10 Pokemon</h3>
+		<ul class="list-unstyled list-group">
+			<li class="list-group-item list-title">POKEMON <span class="pull-right">SPAWN CHANCE</span></li>
+			<li class="list-group-item" ng-repeat="pokemon in pokemons | orderBy :'-spawn_chance' | limitTo :'10'">
+				<img src="{{pokemon.img}}" alt="" class="img-circle img-thumbnail" height="40" width="40">&nbsp;
+				{{pokemon.name}} <span class="pull-right">{{pokemon.spawn_chance}}</span>
+			</li>
+		</ul>
+		</div>
+	</div>
+	
+	<div class="col-xs-12 col-sm-6 allweek  m10">
+		<div class="material">
+			<h3 class="text-center title">All Pokemon</h3>
+		<ul class="list-unstyled list-group">
+			<li class="list-group-item list-title">POKEMON <span class="pull-right">SPAWN CHANCE</span></li>
+			<li class="list-group-item" ng-repeat="pokemon in pokemons">
+				<img src="{{pokemon.img}}" alt="" class="img-circle img-thumbnail" height="40" width="40">
+				{{pokemon.name}} <span class="pull-right digit">{{pokemon.spawn_chance}}</span>
+			</li>
+		</ul>
+		</div>
+	</div>
+	
+	<div class="col-xs-12 col-sm-6 allweek  m10">
+		<div class="material">
+			<h3 class="text-center title">Individual Weekness</h3>
+		<div class="well" ng-repeat="pokemon in pokemons">
+			{{pokemon.name}}
+			<li ng-repeat="week in pokemon.weaknesses">{{week}}</li>
+		</div>
+		</div>
+	</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
